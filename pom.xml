@@ -17,6 +17,8 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <emf.version>2.12.0</emf.version>
+        <xcore.version>1.1.100</xcore.version>
     </properties>
 
     <dependencyManagement>
@@ -40,8 +42,49 @@
                 <artifactId>weld-se-core</artifactId>
                 <version>3.0.2.Final</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.emf</groupId>
+                <artifactId>org.eclipse.emf.common</artifactId>
+                <version>${emf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.emf</groupId>
+                <artifactId>org.eclipse.emf.ecore</artifactId>
+                <version>${emf.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.emf</groupId>
+                <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
+                <version>${xcore.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.emf</groupId>
+            <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-core</artifactId>
+            <version>3.0.2.Final</version>
+        </dependency>
+    </dependencies>
 
 
     <build>
@@ -57,7 +100,9 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fr.alma.Printer</mainClass>
+                            <!--<mainClass>fr.alma.Printer</mainClass>-->
+                            <!--<mainClass>org.eclipse.gmt.modisco.java.impl.Bras</mainClass>-->
+                            <mainClass>org.eclipse.gmt.modisco.java.neoemf.impl.Bras</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

@@ -16,6 +16,12 @@
             <groupId>org.atlanmod.zoo</groupId>
             <artifactId>api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>fr.inria.atlanmod.neoemf</groupId>
+            <artifactId>neoemf-core</artifactId>
+            <version>1.0.2</version>
+        </dependency>
     </dependencies>
 
 </project>
