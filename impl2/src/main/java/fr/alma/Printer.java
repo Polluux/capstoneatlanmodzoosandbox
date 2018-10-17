@@ -2,11 +2,11 @@ package fr.alma;
 
 public class Printer implements IPrint {
 
-    private boolean isInitialized = false;
+    private static boolean isInitialized = false;
 
-    public IPrint init(){
+    public static IPrint init(){
         if(isInitialized){return IPrint.eINSTANCE;}
-        return this;
+        return new Printer();
     }
 
     public void print() {
