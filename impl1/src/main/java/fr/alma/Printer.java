@@ -6,6 +6,7 @@ public class Printer implements IPrint{
 
     public static IPrint init(){
         if(isInitialized){return IPrint.eINSTANCE;}
+        isInitialized = true;
         return new Printer();
     }
 
