@@ -12,6 +12,7 @@
         <module>api</module>
         <module>impl1</module>
         <module>impl2</module>
+        <module>ahouais</module>
     </modules>
 
     <properties>
