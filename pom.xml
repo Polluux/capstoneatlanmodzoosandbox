@@ -12,6 +12,7 @@
         <module>api</module>
         <module>impl1</module>
         <module>impl2</module>
+        <module>krakenostrich</module>
     </modules>
 
     <properties>
