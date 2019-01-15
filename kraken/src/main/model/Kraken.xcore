@@ -1,0 +1,29 @@
+@Ecore(nsURI="http://www.example.org/kraken")
+@GenModel(modelDirectory="/Kraken/src", importerID="org.eclipse.emf.importer.ecore")
+package kraken
+
+import org.eclipse.emf.ecore.xml.^type.Boolean
+
+abstract class Pieuvre {
+	contains Tentacule[] tentacule
+	contains Oeil[] yeux
+}
+
+class Tentacule {
+	int nbVentouses
+}
+
+class Bouche {
+	contains Dent[] dent
+}
+
+class Kraken extends Pieuvre {
+	contains Bouche[1] bouche
+}
+
+class Dent {
+	org.eclipse.emf.ecore.xml.^type.Boolean estCasse
+}
+
+class Oeil {
+}
